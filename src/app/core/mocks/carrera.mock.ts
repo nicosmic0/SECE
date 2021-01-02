@@ -1,4 +1,4 @@
-import { Carrera } from '../_models/carrera.model';
+import { Carrera } from '../models/carrera.model';
 
 export const CARRERAS: Carrera[] = [
     {

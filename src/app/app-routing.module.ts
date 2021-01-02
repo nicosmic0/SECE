@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
-import { AuthGuard } from './core/_helpers';
-import { AdminGuard } from './core/_helpers/admin.guard';
-import { SecretarioGuard } from './core/_helpers/secretario.guard';
+import { AuthGuard } from './core/helpers';
+import { AdminGuard } from './core/helpers/admin.guard';
+import { SecretarioGuard } from './core/helpers/secretario.guard';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);

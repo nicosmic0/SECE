@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { AccountService } from '@app/core/_services';
-import { User } from '@app/core/_models';
+import { AccountService } from '@app/core/services';
+import { User } from '@app/core/models';
 
 @Component({
   selector: 'app-admin-layout',

@@ -1,4 +1,4 @@
-import { Encuesta } from '../_models/encuesta.model';
+import { Encuesta } from '../models/encuesta.model';
 
 // carreras: (14),(15),16,22,(23),(32),33
 // carrera: secretario

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MyValidators } from '@app/utils/validators';
-import { CarreraService } from 'src/app/core/_services/carrera.service';
+import { CarreraService } from '@app/core/services/carrera.service';
 
 
 @Component({

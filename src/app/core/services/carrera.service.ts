@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Carrera } from '../_models/carrera.model';
+import { Carrera } from '../models/carrera.model';
 
 
 import { CARRERAS } from '../mocks/carrera.mock'; 

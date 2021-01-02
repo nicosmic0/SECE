@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Carrera } from 'src/app/core/_models/carrera.model';
-import { CarreraService } from 'src/app/core/_services/carrera.service';
+import { Carrera } from '@app/core/models/carrera.model';
+import { CarreraService } from '@app/core/services/carrera.service';
 
 import { MatDialog } from '@angular/material/dialog';
 import { CreateCarreraComponent } from '../create-carrera/create-carrera.component';

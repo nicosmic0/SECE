@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Encuesta } from '@app/core/_models/encuesta.model';
-import { AccountService } from '@app/core/_services';
-import { EncuestaService } from '@app/core/_services/encuesta.service';
+import { Encuesta } from '@app/core/models/encuesta.model';
+import { AccountService } from '@app/core/services';
+import { EncuestaService } from '@app/core/services/encuesta.service';
 
 @Component({
   selector: 'app-crud-encuesta',

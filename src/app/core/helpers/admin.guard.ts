@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { AccountService } from '../_services';
+import { AccountService } from '../services';
 
 // Este guard revisa si el usuario inicia sesision y si es admin
 

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { EncuestaService } from '@app/core/_services/encuesta.service';
+import { EncuestaService } from '@app/core/services/encuesta.service';
 
 @Pipe({
   name: 'getNumeroPreguntas'

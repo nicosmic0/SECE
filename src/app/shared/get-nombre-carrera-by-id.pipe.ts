@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { CarreraService } from '@app/core/_services/carrera.service';
+import { CarreraService } from '@app/core/services/carrera.service';
 
 @Pipe({
   name: 'getNombreCarreraById'

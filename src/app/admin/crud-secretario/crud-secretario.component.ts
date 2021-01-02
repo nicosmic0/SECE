@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { User } from '@app/core/_models';
-import { AccountService } from '@app/core/_services';
+import { User } from '@app/core/models';
+import { AccountService } from '@app/core/services';
 import { CreateSecretarioComponent } from '../create-secretario/create-secretario.component';
 
 @Component({

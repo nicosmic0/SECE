@@ -4,12 +4,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
-import { fakeBackendProvider } from './core/_helpers';
+import { fakeBackendProvider } from './core/helpers';
 
 import { AppRoutingModule } from './app-routing.module';
-import { JwtInterceptor, ErrorInterceptor } from './core/_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './core/helpers';
 import { AppComponent } from './app.component';
-import { AlertComponent } from './shared/_components';
+import { AlertComponent } from './shared/components';
 import { HomeComponent } from './home';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';

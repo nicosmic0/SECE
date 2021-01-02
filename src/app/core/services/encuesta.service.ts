@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ENCUESTAS } from '../mocks/encuesta.mock';
 import { PREGUNTAS } from '../mocks/pregunta.mock';
-import { Encuesta } from '../_models/encuesta.model';
+import { Encuesta } from '../models/encuesta.model';
 
 @Injectable({
   providedIn: 'root'

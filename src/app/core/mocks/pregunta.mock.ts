@@ -1,4 +1,4 @@
-import { Pregunta } from '../_models/pregunta.model';
+import { Pregunta } from '../models/pregunta.model';
 
 export const PREGUNTAS: Pregunta[] = [
     {
