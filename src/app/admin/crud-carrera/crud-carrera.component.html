@@ -1,0 +1,33 @@
+<div class="header">
+  <h1>Carreras</h1>
+  <p>En esta sección podras adminsitrar y ver todas las carreras registradas.</p>
+</div>
+
+<div class="createCarreraButton">
+  <p>Crear Carrera </p>
+  <button type="button" class="btn btn-primary rounded-pill" (click)="openCreateCarreraDialog()">+</button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let carrera of carreras; index as i">
+      <th scope="row">{{ carrera.id }}</th>
+      <td>
+        {{ carrera.nombre }}
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteCarrera(carrera.id)">Borrar</button>
+        <button type="button" class="btn btn-warning">Editar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  

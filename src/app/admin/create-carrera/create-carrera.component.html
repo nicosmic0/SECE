@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Crear Carrera</h2>
+
+<form [formGroup]="form" (ngSubmit)="saveCarrera($event)">
+
+  <div class="form-group">
+    <label>ID</label>
+    <input type="number" class="form-control" formControlName="id">
+    <small class="form-text text-muted" *ngIf="idField!.hasError('required') && idField!.touched">Este campo es obligatorio</small>
+  </div>
+  
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre">
+    <small class="form-text text-muted" *ngIf="nombreField!.hasError('required') && nombreField!.touched">Este campo es obligatorio</small>
+  </div>
+  
+  <button type="submit" class="btn btn-success" [mat-dialog-close]="true" [disabled]="form.invalid">Guardar</button>
+  <button type="button" class="btn btn-dark" mat-dialog-close>Cancelar</button>
+
+</form>
