@@ -62,15 +62,15 @@ export class LoginComponent implements OnInit {
             userRol = user.rol
             switch (userRol) {
                 case 'admin':
-                    console.log('admin');
+                    console.log('rol: admin');
                     returnUrl = '/admin';
                     break;
                 case 'secre':
-                    console.log('secre');
+                    console.log('rol: secre');
                     returnUrl = '/secretario';
                     break;
                 case 'estu':
-                    console.log('estu');
+                    console.log('rol: estu');
                     break;
             
                 default:

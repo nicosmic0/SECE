@@ -1,14 +1,14 @@
 ﻿<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        <!-- <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a> -->
+        <a class="nav-item nav-link" (click)="logout()">Cerrar Sesión</a>
     </div>
 </nav>
 <div class="p-4">
     <div class="container">
-        <h1>Hi {{user.name}}!</h1>
-        <p>You're logged in with Angular 10!!</p>
-        <p><a routerLink="/users">Manage Users</a></p>
+        <h1>Hola {{user.name}}!</h1>
+        <p>Bienvenido a SECE</p>
+        <!-- <small>{{ user.rol }}</small> -->
     </div>
 </div>

@@ -18,6 +18,15 @@ export class SecretarioGuard implements CanActivate {
         // si es secretario return true
         return true;
     }
+    if (user && user.rol === 'admin') {
+      this.router.navigate(['/admin']);
+      return false;
+    }
+    if (user && user.rol === 'estu') {
+      this.router.navigate(['/estudiante']);
+      return false;
+    }
+
 
     // not logged in o no secre so redirect to login page with the return url
     this.router.navigate(['/account/login'], { queryParams: { returnUrl: state.url }});
