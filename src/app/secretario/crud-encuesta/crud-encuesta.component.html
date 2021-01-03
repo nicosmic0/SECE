@@ -1,48 +1,55 @@
 <div class="header">
+  <div class="d-flex justify-content-between align-items-center">
     <h1>Encuestas</h1>
+    <div class="createCarreraButton">
+      <p>Crear Encuesta </p>
+      <button type="button" class="btn btn-primary rounded-pill" routerLink="crear">+</button>
+    </div>
+  </div>
     <p>En esta sección podras adminsitrar y ver todas las encuestas registradas por ti.</p>
-  </div>
+</div>
+
+<div class="search">
+  <input class="form-control form-control-sm rounded-pill" type="text" placeholder="Buscar por nombre de encuesta" [(ngModel)]="busqueda" (keyup)="search()">
+</div>
   
-  <div class="createCarreraButton">
-    <p>Crear Encuesta </p>
-    <button type="button" class="btn btn-primary rounded-pill">+</button>
-  </div>
-  
-  <table class="table table-striped">
-      <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Anónima</th>
-        <th scope="col">N° Preguntas</th>
-        <th scope="col">Fecha Inicio</th>
-        <th scope="col">Fecha Termino</th>
-        <th scope="col">Habilitada</th>
-        <th scope="col"></th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let encuesta of encuestas; index as i">
-        <th scope="row">{{ encuesta.id }}</th>
-        <td>{{ encuesta.nombre }}</td>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Anónima</th>
+    <th scope="col">N° Preguntas</th>
+    <th scope="col">Fecha Inicio</th>
+    <th scope="col">Fecha Termino</th>
+    <th scope="col">Habilitada</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let encuesta of encuestas; index as i">
+    <th scope="row">{{ encuesta.id }}</th>
+    <td>{{ encuesta.nombre }}</td>
 
-        <td *ngIf="encuesta.anonima">✓</td>
-        <td *ngIf="!encuesta.anonima">X</td>
+    <td *ngIf="encuesta.anonima">✓</td>
+    <td *ngIf="!encuesta.anonima">X</td>
 
-        <td>{{ encuesta.id |getNumeroPreguntas }}</td>
-        <td>{{ encuesta.fechaInicio.toDateString() }}</td>
-        <td>{{ encuesta.fechaTermino.toDateString() }}</td>
-        
-        <td *ngIf="encuesta.habilitada">✓</td>
-        <td *ngIf="!encuesta.habilitada">X</td>
+    <td>{{ encuesta.id |getNumeroPreguntas }}</td>
+    <td>{{ encuesta.fechaInicio.toDateString() }}</td>
+    <td>{{ encuesta.fechaTermino.toDateString() }}</td>
+    
+    <td *ngIf="encuesta.habilitada">✓</td>
+    <td *ngIf="!encuesta.habilitada">X</td>
 
-        <td>
-            <button type="button" class="btn btn-info">Ver</button>
-            <button type="button" class="btn btn-success" [disabled]="encuesta.habilitada">Resultados</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <td>
+        <button type="button" class="btn btn-info">Ver</button>
+        <button type="button" class="btn btn-success" [disabled]="encuesta.habilitada">Resultados</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
   
     
   

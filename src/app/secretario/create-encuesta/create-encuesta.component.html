@@ -1,0 +1,103 @@
+<div class="card mt-2 mb-3">
+    <div class="card-header">
+      Configuración
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Titulo</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descripción</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+            <div class="custom-control custom-switch col-2">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Anónima</label>
+            </div>
+
+            <div class="form-group col-5">
+                <label>Fecha de Inicio</label>
+                <input type="datetime-local" name="" id="">
+            </div>
+            
+            <div class="form-group col-5">
+                <label>Fecha de Término</label>
+                <input type="datetime-local" name="" id="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-2 mb-3">
+    <div class="card-header">
+        Agregar Pregunta
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="form-group col-8">
+                <label for="exampleFormControlInput1">Titulo de pregunta</label>
+                <input type="text" class="form-control">
+            </div>
+            
+            <div class="form-group col-4">
+                <label for="exampleFormControlSelect1">Tipo de Pregunta</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option value="1">Selección única</option>
+                    <option value="2">Selección Multiple</option>
+                    <option value="3">Escala</option>
+                    <option value="4">Desarrollo</option>
+                </select>
+            </div>
+        </div><hr>
+        
+        <div class="row">   
+            <div class="col-11">
+                
+                <!-- seleccion unica y multiple -->
+                <!-- <small>Ingresa las alternativas</small>
+                <div class="form-group row ml-1">
+                    <input type="text" class="form-control form-control-sm col">
+                    <button type="button" class="btn btn-success btn-sm">+</button>
+                </div>
+                <div class="form-group row ml-1">
+                    <input type="text" class="form-control form-control-sm col">
+                    <button type="button" class="btn btn-danger btn-sm">x</button>
+                </div> -->
+
+                <!-- escala -->
+                <small>Ingresa los rangos</small>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label>Rango Inferior</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group col-6">
+                        <label>Rango Superior</label>
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success">Agregar Pregunta</button>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-2 mb-3">
+    <div class="card-header">
+        Preguntas Agregadas
+    </div>
+    <div class="card-body">
+        <div>
+            <h4>1.- titulo?</h4>
+            <p>es demasiado para hacer, por el tema de de que va variando según la pregunta D:</p>
+        </div>
+    </div>
+    
+</div>

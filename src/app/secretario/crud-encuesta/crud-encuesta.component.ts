@@ -12,6 +12,7 @@ export class CrudEncuestaComponent implements OnInit {
 
   encuestas!: Encuesta[];
   idUsuario!: number;
+  busqueda!: string;
 
   constructor(
     private encuestaService: EncuestaService,
@@ -30,8 +31,12 @@ export class CrudEncuestaComponent implements OnInit {
     });
   }
 
-  // deleteEncuesta(id: number){
-  //   this.encuestaService.deleteEncuesta(id).subscribe(resp => console.log(`Encuesta id:${id} eliminda`));
-  // }
+  search(){
+    if(this.busqueda.length > 0){
+      this.encuestas = this.encuestas.filter(encuesta => encuesta.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(this.busqueda));
+    }else{
+      this.getEncuestas();
+    }
+  }
 
 }

@@ -4,8 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '@app/core/services';
+import { MyValidators } from '@app/utils/validators';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({ templateUrl: 'login.component.html', styleUrls: ['./login.component.less'] })
 export class LoginComponent implements OnInit {
     form: FormGroup;
     loading = false;
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.form = this.formBuilder.group({
-            email: ['', Validators.required],
+            email: ['', Validators.required, MyValidators.isUcmEmail],
             password: ['', Validators.required]
         });
     }
