@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '@app/core/models';
 import { Encuesta } from '@app/core/models/encuesta.model';
 import { AccountService } from '@app/core/services';
 import { EncuestaService } from '@app/core/services/encuesta.service';
@@ -11,7 +12,7 @@ import { EncuestaService } from '@app/core/services/encuesta.service';
 export class CrudEncuestaComponent implements OnInit {
 
   encuestas!: Encuesta[];
-  idUsuario!: number;
+  carreraUsuario!: string;
   busqueda!: string;
 
   constructor(
@@ -21,12 +22,13 @@ export class CrudEncuestaComponent implements OnInit {
 
   ngOnInit(): void {
     // obtiene el id del secretario que está logeado
-    this.idUsuario = parseInt(this.accountService.userValue.id);
+    this.carreraUsuario = this.accountService.userValue.carrera.toString();
     this.getEncuestas();
   }
 
   getEncuestas(){
-    this.encuestaService.getEncuestaBySecretario(this.idUsuario).subscribe(encuestas => {
+    this.encuestaService.getEncuestaByCarrera(parseInt(this.carreraUsuario)).subscribe(encuestas => {
+      console.log(encuestas);
       this.encuestas = encuestas;
     });
   }

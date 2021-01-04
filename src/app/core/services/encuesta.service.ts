@@ -19,6 +19,10 @@ export class EncuestaService {
     return of(this.encuestas.filter(encuesta => encuesta.usuarioCreador === idSecretario));
   }
 
+  getEncuestaByCarrera(idCarrera: number): Observable<Encuesta[]>{
+    return of(this.encuestas.filter(encuesta => encuesta.carrera === idCarrera));
+  }
+
   deleteEncuesta(id: number): Observable<Encuesta>{
     return of(this.encuestas.splice(id,1)[0]);
   }
